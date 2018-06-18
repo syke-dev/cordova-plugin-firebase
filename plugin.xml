@@ -89,6 +89,10 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<header-file src="src/ios/FirebasePlugin.h" />
 		<source-file src="src/ios/FirebasePlugin.m" />
 
+	<!--
+		Using cocoapods now, but to make merging from the master repo easier,
+		leave in all of the manual inclusion of the ios firebase dependencies.
+
 		<header-file src="src/ios/Firebase/Firebase.h" />
 
 		<framework custom="true" src="src/ios/Firebase/Analytics/FirebaseAnalytics.framework" />
@@ -107,6 +111,14 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<framework custom="true" src="src/ios/Firebase/Auth/GTMSessionFetcher.framework" />
 		<framework custom="true" src="src/ios/Firebase/Performance/FirebasePerformance.framework" />
 		<framework custom="true" src="src/ios/Firebase/Performance/FirebaseSwizzlingUtilities.framework" />
+	-->
+
+		<framework src="Firebase/Core" type="podspec" spec="" />
+		<framework src="Firebase/Messaging" type="podspec" spec="" />
+		<framework src="Firebase/Crash" type="podspec" spec="" />
+		<framework src="Firebase/RemoteConfig" type="podspec" spec="" />
+		<framework src="Firebase/Auth" type="podspec" spec="" />
+		<framework src="Firebase/Performance" type="podspec" spec="" />
 	</platform>
 
 	<platform name="browser">
