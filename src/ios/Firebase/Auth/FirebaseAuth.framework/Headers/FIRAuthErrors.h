@@ -299,6 +299,11 @@ typedef NS_ENUM(NSInteger, FIRAuthErrorCode) {
      */
     FIRAuthErrorCodeWebInternalError = 17062,
 
+    /** Indicates that a non-null user was expected as an argmument to the operation but a null
+        user was provided.
+     */
+    FIRAuthErrorCodeNullUser = 17067,
+
     /** Indicates an error occurred while attempting to access the keychain.
      */
     FIRAuthErrorCodeKeychainError = 17995,
@@ -306,6 +311,11 @@ typedef NS_ENUM(NSInteger, FIRAuthErrorCode) {
     /** Indicates an internal error occurred.
      */
     FIRAuthErrorCodeInternalError = 17999,
+
+    /** Raised when a JWT fails to parse correctly. May be accompanied by an underlying error
+        describing which step of the JWT parsing process failed.
+     */
+    FIRAuthErrorCodeMalformedJWT = 18000,
 } NS_SWIFT_NAME(AuthErrorCode);
 
 @end
